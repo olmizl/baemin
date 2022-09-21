@@ -1,0 +1,115 @@
+@import "vars";
+@import "mixin";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  color: #111;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+#header {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  .logo {
+    img {
+      width: 65%;
+    }
+  }
+  #gnb {
+    flex-basis: 65%;
+    ul {
+      display: flex;
+      li {
+        font-size: 20px;
+        margin-right: 2%;
+        font-weight: 500;
+        &.gnbClick {
+          color: #10e1c4;
+        }
+      }
+    }
+  }
+  .icon {
+    flex-basis: 17%;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 8%;
+    }
+    .login {
+      border: 3px solid black;
+      border-radius: 20px;
+      padding: 1px 17px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .hamBtn {
+      width: 28px;
+      margin-left: 7%;
+      height: 100%;
+      span {
+        background-color: #000;
+        width: 100%;
+        height: 3px;
+        display: block;
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+
+#Page01 {
+  .container {
+    .title {
+      ul {
+        display: flex;
+        flex-direction: column;
+        margin: 8% 0 2% 0;
+        align-items: flex-start;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 90px;
+        li {
+          &:nth-child(1) {
+            display: flex;
+            margin-bottom: 2%;
+          }
+          h1 {
+            font-size: 55px;
+            font-weight: 700;
+          }
+          span {
+            font-weight: 500;
+            font-size: 13px;
+            padding: 16px 0 0 18px;
+          }
+          p {
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}
